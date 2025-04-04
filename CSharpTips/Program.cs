@@ -8,21 +8,38 @@
 
 #region CONST VS READONELY - POSTED!
 
-class Car
-{
-    public const int Wheels = 4;    // Always 4
-    public readonly string Color;   // Set once
+//class Car
+//{
+//    public const int Wheels = 4;    // Always 4
+//    public readonly string Color;   // Set once
 
-    public Car(string carColor)
-    {
-        Color = carColor;          // Locked after this
-    }
-}
+//    public Car(string carColor)
+//    {
+//        Color = carColor;          // Locked after this
+//    }
+//}
 
 #endregion
 
 
-#region
+#region Break VS Continue -- POSTED!
+
+for (int i = 1; i <= 5; i++)
+{
+    if (i == 3) continue; // skip 3
+    Console.WriteLine(i);
+}
+// Output: 1 2 4 5
+
+
+for (int i = 1; i <= 5; i++)
+{
+    if (i == 3) break; // stop at 3
+    Console.WriteLine(i);
+}
+// Output: 1 2
+
+#endregion
 
 
 
@@ -77,19 +94,19 @@ public IEnumerable<Product> GetProducts()
 
 
 if (str == null || str == "" || str.Trim() == "")
-    {
-        Console.WriteLine("Invalid string");
-    }
-    
-    
-    //bad
-    
-    
-    if (string.IsNullOrWhiteSpace(str))
-    {
-        Console.WriteLine("Invalid string");
-    }
-    
+{
+    Console.WriteLine("Invalid string");
+}
+
+
+//bad
+
+
+if (string.IsNullOrWhiteSpace(str))
+{
+    Console.WriteLine("Invalid string");
+}
+
 
 #endregion
 
