@@ -43,7 +43,11 @@ for (int i = 1; i <= 5; i++)
 
 
 
+#region string vs StringBuilder
 
+
+
+#endregion
 
 
 
