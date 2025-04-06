@@ -43,13 +43,16 @@ for (int i = 1; i <= 5; i++)
 
 #endregion
 
+List<Itme> items = new List<Item>();
+
+
 #region string vs stringBuilder
 
 // ❌ Creates a new string in each iteration – not efficient
 
 string result = "";
 
-for (int i = 1; i <= 5; i++)
+for (int i = 1; i <= items.Count(); i++)
     result += $"Item #{i}\n";
 
 
@@ -57,7 +60,7 @@ for (int i = 1; i <= 5; i++)
 
 var sb = new StringBuilder();
 
-for (int i = 1; i <= 5; i++)
+for (int i = 1; i <= items.Count(); i++)
     sb.AppendLine($"Item #{i}");
 
 
