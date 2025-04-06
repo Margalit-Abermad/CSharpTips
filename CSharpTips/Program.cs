@@ -24,6 +24,8 @@
 
 #region Break VS Continue -- POSTED!
 
+using System.Text;
+
 for (int i = 1; i <= 5; i++)
 {
     if (i == 3) continue; // skip 3
@@ -40,6 +42,27 @@ for (int i = 1; i <= 5; i++)
 // Output: 1 2
 
 #endregion
+
+#region string vs stringBuilder
+
+// ❌ Creates a new string in each iteration – not efficient
+
+string result = "";
+
+for (int i = 1; i <= 5; i++)
+    result += $"Item #{i}\n";
+
+
+// ✅ Reuses the same object – much better performance
+
+var sb = new StringBuilder();
+
+for (int i = 1; i <= 5; i++)
+    sb.AppendLine($"Item #{i}");
+
+
+#endregion
+
 
 
 
